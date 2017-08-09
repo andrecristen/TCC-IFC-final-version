@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">"Brincando e Aprendendo "</string>
+    <string name="n_mero_m_ximo_de_erros_5">*Número máximo de erros 5*</string>
+    <string name="desisitir">Desisitir</string>
+</resources>

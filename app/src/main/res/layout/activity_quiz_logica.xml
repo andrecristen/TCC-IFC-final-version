@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.example.andrecristen.brincandoeaprendendo.QuizPegadinhas">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Pontos"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/pontos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="0"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/questao"
+        android:layout_width="358dp"
+        android:layout_height="142dp"
+        android:layout_marginBottom="40dp"
+        android:padding="8dp"
+        android:text="QUESTÃO"
+        android:textColor="#000"
+        android:textSize="8pt"
+        tools:ignore="HardcodedText,InefficientWeight" />
+
+
+    <Button
+        android:id="@+id/opcao2"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="24dp"
+        android:background="?attr/colorControlHighlight"
+        android:padding="8dp"
+        android:text="RESPOSTA"
+        android:textColor="#fff"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/opcao3"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="24dp"
+        android:background="?attr/colorControlHighlight"
+        android:padding="8dp"
+        android:text="RESPOSTA"
+        android:textColor="#fff"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/opcao1"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="24dp"
+        android:background="?attr/colorControlHighlight"
+        android:padding="8dp"
+        android:text="RESPOSTA"
+        android:textColor="#fff"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/passar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:onClick="passar"
+        android:text="Próxima Questão"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
