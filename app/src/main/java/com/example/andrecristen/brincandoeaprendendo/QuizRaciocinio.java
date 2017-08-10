@@ -8,9 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class QuizRaciocinio extends AppCompatActivity {
 
+    ArrayList<Integer> numeros = new ArrayList<Integer>();
     private RacicinioLogico mLivrariaQuestao = new RacicinioLogico();
 
     private TextView mostrarPontos;
@@ -18,12 +22,14 @@ public class QuizRaciocinio extends AppCompatActivity {
     private Button mBotaoOpcao1;
     private Button mBotaoOpcao2;
     private Button mBotaoOpcao3;
+    private Button mBotaoProximaPergunta;
 
     private String mRespostaCorreta;
 
     private int mAcertos;
     private int mErros;
     private int mNumeroQuestao = 0;
+    private int questoesPassadas = 0;
 
     public void passar(View view){
         mudarQuestao();
@@ -33,18 +39,21 @@ public class QuizRaciocinio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_raciocinio);
 
+        misturarNumeros();
+
         mostrarPontos = (TextView)findViewById(R.id.pontos);
         mVerQuestao = (TextView)findViewById(R.id.questao);
         mBotaoOpcao1 = (Button)findViewById(R.id.opcao1);
         mBotaoOpcao2 = (Button)findViewById(R.id.opcao2);
         mBotaoOpcao3 = (Button)findViewById(R.id.opcao3);
+        mBotaoProximaPergunta = (Button)findViewById(R.id.passar);
 
         mudarQuestao();
 
         mBotaoOpcao1.setBackgroundColor(Color.LTGRAY);
         mBotaoOpcao2.setBackgroundColor(Color.LTGRAY);
         mBotaoOpcao3.setBackgroundColor(Color.LTGRAY);
-
+        mBotaoProximaPergunta.setVisibility(View.INVISIBLE);
 
         mBotaoOpcao1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -54,15 +63,20 @@ public class QuizRaciocinio extends AppCompatActivity {
                 if (mBotaoOpcao1.getText() == mRespostaCorreta){
                     mAcertos = mAcertos + 1;
                     updateScore(mAcertos);
+                    questoesPassadas++;
+                    mBotaoProximaPergunta.setVisibility(View.VISIBLE);
                     mBotaoOpcao1.setBackgroundColor(Color.GREEN);
                     mBotaoOpcao2.setClickable(false);
                     mBotaoOpcao3.setClickable(false);
 
                 }else {
                     mErros = mErros +1;
+                    questoesPassadas++;
+                    mBotaoProximaPergunta.setVisibility(View.VISIBLE);
                     mBotaoOpcao1.setBackgroundColor(Color.RED);
                     mBotaoOpcao2.setClickable(false);
                     mBotaoOpcao3.setClickable(false);
+
                 }
             }
         });
@@ -76,6 +90,8 @@ public class QuizRaciocinio extends AppCompatActivity {
                 if (mBotaoOpcao2.getText() == mRespostaCorreta){
                     mAcertos = mAcertos + 1;
                     updateScore(mAcertos);
+                    questoesPassadas++;
+                    mBotaoProximaPergunta.setVisibility(View.VISIBLE);
                     mBotaoOpcao2.setBackgroundColor(Color.GREEN);
                     mBotaoOpcao1.setClickable(false);
                     mBotaoOpcao3.setClickable(false);
@@ -84,14 +100,14 @@ public class QuizRaciocinio extends AppCompatActivity {
 
                 }else {
                     mErros = mErros +1;
+                    questoesPassadas++;
+                    mBotaoProximaPergunta.setVisibility(View.VISIBLE);
                     mBotaoOpcao2.setBackgroundColor(Color.RED);
                     mBotaoOpcao1.setClickable(false);
                     mBotaoOpcao3.setClickable(false);
                 }
             }
         });
-
-
 
 
 
@@ -103,12 +119,16 @@ public class QuizRaciocinio extends AppCompatActivity {
                 if (mBotaoOpcao3.getText() == mRespostaCorreta){
                     mAcertos = mAcertos + 1;
                     updateScore(mAcertos);
+                    questoesPassadas++;
+                    mBotaoProximaPergunta.setVisibility(View.VISIBLE);
                     mBotaoOpcao3.setBackgroundColor(Color.GREEN);
                     mBotaoOpcao2.setClickable(false);
                     mBotaoOpcao1.setClickable(false);
 
                 }else {
                     mErros = mErros +1;
+                    questoesPassadas++;
+                    mBotaoProximaPergunta.setVisibility(View.VISIBLE);
                     mBotaoOpcao3.setBackgroundColor(Color.RED);
                     mBotaoOpcao2.setClickable(false);
                     mBotaoOpcao1.setClickable(false);
@@ -118,17 +138,26 @@ public class QuizRaciocinio extends AppCompatActivity {
 
 
     }
+    private void misturarNumeros() {
+        for (int i = 0; i <= 24; i++) {
+            numeros.add(i);
+        }
+     Collections.shuffle(numeros);
+}
 
 
     private void mudarQuestao() {
+        mNumeroQuestao = numeros.get(questoesPassadas);
+
+
         mVerQuestao.setText(mLivrariaQuestao.getQuestao(mNumeroQuestao));
         mBotaoOpcao1.setText(mLivrariaQuestao.getOpcao1(mNumeroQuestao));
         mBotaoOpcao2.setText(mLivrariaQuestao.getOpcao2(mNumeroQuestao));
         mBotaoOpcao3.setText(mLivrariaQuestao.getOpcao3(mNumeroQuestao));
 
         mRespostaCorreta = mLivrariaQuestao.getRespostaCorreta(mNumeroQuestao);
-        mNumeroQuestao++;
 
+        mBotaoProximaPergunta.setVisibility(View.INVISIBLE);
         mBotaoOpcao1.setBackgroundColor(Color.LTGRAY);
         mBotaoOpcao2.setBackgroundColor(Color.LTGRAY);
         mBotaoOpcao3.setBackgroundColor(Color.LTGRAY);
@@ -147,7 +176,7 @@ public class QuizRaciocinio extends AppCompatActivity {
 
             startActivity(intent);
 
-        } else if (mNumeroQuestao == 26) {
+        } else if (questoesPassadas == 24) {
             Intent intent = new Intent(QuizRaciocinio.this, TelaFinalQuizLogica.class);
             String localizacao = "";
             localizacao = "" + mostrarPontos.getText();
@@ -159,7 +188,6 @@ public class QuizRaciocinio extends AppCompatActivity {
 
         }
     }
-
 
     private void updateScore(int point) {
         mostrarPontos.setText("" + mAcertos);
