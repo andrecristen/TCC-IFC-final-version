@@ -19,7 +19,7 @@ public class DesafiosPegadinhas {
             "Andando pela rua, um homem corta 10 árvores à sua direita. Na volta corta 10 à sua esquerda. Quantas árvores ele cortou no total ?", //13
             "Quatro dúzias de perguntinhas e mais uma, quantas perguntas são ?",//14
             "7+7/7+7*7-7 = ?",//15
-            "Um casal têm 6 filhos homens, cada irmão tem uma irmã. Quantas pessoas há na família ?\n",//16
+            "Um casal têm 6 filhos homens, cada irmão tem uma irmã. Quantas pessoas há na família no total ?\n",//16
             "Raiz quadrada de: (-4)²= ",//17
             "9-3 dividido ⅓ +1\n",//18
             "Em um teste, Marcos acertou 3 questões para cada questão que Luiza acertou. Se Marcos acertou 12 questões, quantas Luiza acertou ?",//19
