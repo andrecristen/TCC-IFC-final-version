@@ -27,4 +27,9 @@ public class TelaMenu extends AppCompatActivity {
         Intent telaRaciocinio = new Intent(this, QuizRaciocinio.class);
         startActivity(telaRaciocinio);
     }
+    public void startTelaAjuda(View view) {
+
+        Intent telaRaciocinio = new Intent(this, TelaAjuda.class);
+        startActivity(telaRaciocinio);
+    }
 }

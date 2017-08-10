@@ -38,8 +38,8 @@
 
     <TextView
         android:id="@+id/questao"
-        android:layout_width="358dp"
-        android:layout_height="142dp"
+        android:layout_width="363dp"
+        android:layout_height="146dp"
         android:layout_marginBottom="40dp"
         android:padding="8dp"
         android:text="QUESTÃO"
@@ -53,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:layout_marginBottom="24dp"
+        android:layout_weight="0.08"
         android:background="?attr/colorControlHighlight"
         android:padding="8dp"
         android:text="RESPOSTA"
@@ -75,6 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:layout_marginBottom="24dp"
+        android:layout_weight="0.09"
         android:background="?attr/colorControlHighlight"
         android:padding="8dp"
         android:text="RESPOSTA"

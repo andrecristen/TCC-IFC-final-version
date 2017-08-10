@@ -22,7 +22,8 @@
         <activity android:name=".QuizLogica" />
         <activity android:name=".TelaFinalQuizLogica" />
         <activity android:name=".TelaFinalQuizPegadinhas" />
-        <activity android:name=".TelaFinalQuizRaciocinio"></activity>
+        <activity android:name=".TelaFinalQuizRaciocinio" />
+        <activity android:name=".TelaAjuda"></activity>
     </application>
 
 </manifest>

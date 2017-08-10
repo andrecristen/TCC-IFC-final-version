@@ -1,11 +1,15 @@
 package com.example.andrecristen.brincandoeaprendendo;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,6 +27,7 @@ public class QuizLogica extends AppCompatActivity {
     private Button mBotaoOpcao2;
     private Button mBotaoOpcao3;
     private Button mBotaoProximaPergunta;
+
 
     private String mRespostaCorreta;
 
@@ -148,6 +153,7 @@ private void misturarNumeros(){
 
     Collections.shuffle(numeros);
 }
+
     private void mudarQuestao() {
 
         mNumeroQuestao = numeros.get(questoesPassadas);
