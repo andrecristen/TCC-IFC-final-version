@@ -4,16 +4,16 @@ package com.example.andrecristen.brincandoeaprendendo;
 public class DesafiosPegadinhas {
 
     private String mQuestoes [] = {
-            "O pai do padre é filho do meu pai. O que eu sou do Padre?", //1
+            "O pai do padre é filho do meu pai. O que eu sou do Padre? ", //1
             "Se um tijolo pesa 1Kg mais meio tijolo, quanto pesa um tijolo e meio?", //2
             "Alexandre, o filho mais velho de Luís, está casado com Mariane. Ele tem exatamente metade da idade que seu pai está casado. Sabendo que Luís está casado há X anos, qual a idade de Alexandre ?\n", //3
             "Se você sai de São Paulo dirigindo um ônibus com 20 passageiros, deixa 18 e pega 14 no Rio de Janeiro e chega ao Espírito Santo às 12 horas do dia seguinte, você é capaz de dizer o nome do motorista?", //4
             "Se João levou 2 horas para cavar um buraco. Quantas horas ele levaria para cavar meio buraco?\n", //5
             "Se há 3 maçãs numa vasilha e você pega 2, com quantas você fica?\n", //6
             "Um criador tem 18 bois. Todos morrem, menos 7. Quantos ficam?", //7
-            "Quantos aniversários fez alguém que viveu 78 anos, 1o meses e 6 dias?", //8
+            "Quantos aniversários fez alguém que viveu 78 anos, 10 meses e 6 dias?", //8
             "Se meia cabeça tem 50.000 fios de cabelo, quantos fios de cabelo tem uma careca inteira?\n", //9
-            "Eu estava levando 10 vacas para o pasto, mas uma morreu. Quantas ficaram no caminho ?\n", //10
+            "Eu estava levando 10 vacas para o pasto, mas uma morreu. Quantas ficaram pelo caminho ?\n", //10
             "3 gatos comem 3 ratos em 3 minutos. Quanto tempo 100 gatos levam para comer 100 ratos ?\n", //11
             "Se ontem fosse amanhã, hoje seria sexta-feira. Que dia é hoje ?", //12
             "Andando pela rua, um homem corta 10 árvores à sua direita. Na volta corta 10 à sua esquerda. Quantas árvores ele cortou no total ?", //13
@@ -29,7 +29,7 @@ public class DesafiosPegadinhas {
             "Divida 40 por sua metade. Agora some 10, qual o resultado?\n",//23
             "O que é um primo dentro da matemática ?\n",//24
             "3, 7, 16 e 35 formam uma sequência de 5 números. Qual o 5º elemento ?",//25
-            ""//26
+
 
 
 
@@ -80,27 +80,25 @@ public class DesafiosPegadinhas {
 
 
 
-        public String getOpcao1(int a) {
-            String Opcao0 = mOpcoes[a][0];
-            return Opcao0;
-        }
-
-
-        public String getOpcao2(int a) {
-            String Opcao1 = mOpcoes[a][1];
-            return Opcao1;
-        }
-
-        public String getOpcao3(int a) {
-            String Opcao2 = mOpcoes[a][2];
-            return Opcao2;
-        }
-
-        public String getRespostaCorreta(int a) {
-            String Resposta = mRespostaCorreta[a];
-            return Resposta;
-        }
-
+    public String getOpcao1(int a) {
+        String Opcao0 = mOpcoes[a][0];
+        return Opcao0;
     }
 
 
+    public String getOpcao2(int a) {
+        String Opcao1 = mOpcoes[a][1];
+        return Opcao1;
+    }
+
+    public String getOpcao3(int a) {
+        String Opcao2 = mOpcoes[a][2];
+        return Opcao2;
+    }
+
+    public String getRespostaCorreta(int a) {
+        String Resposta = mRespostaCorreta[a];
+        return Resposta;
+    }
+
+}
