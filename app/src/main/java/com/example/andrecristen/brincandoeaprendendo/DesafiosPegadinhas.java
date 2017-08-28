@@ -4,7 +4,7 @@ package com.example.andrecristen.brincandoeaprendendo;
 public class DesafiosPegadinhas {
 
     private String mQuestoes [] = {
-            "O pai do padre é filho do meu pai. O que eu sou do Padre? ", //1
+            "O pai do padre é filho do meu pai. O que eu sou do Padre?  ", //1
             "Se um tijolo pesa 1Kg mais meio tijolo, quanto pesa um tijolo e meio?", //2
             "Alexandre, o filho mais velho de Luís, está casado com Mariane. Ele tem exatamente metade da idade que seu pai está casado. Sabendo que Luís está casado há X anos, qual a idade de Alexandre ?\n", //3
             "Se você sai de São Paulo dirigindo um ônibus com 20 passageiros, deixa 18 e pega 14 no Rio de Janeiro e chega ao Espírito Santo às 12 horas do dia seguinte, você é capaz de dizer o nome do motorista?", //4
