@@ -1,10 +1,13 @@
-#Brincando & Aprendendo - TCC
-DESENVOLVIMENTO DE UM APLICATIVO EM ANDROID PARA AUXÍLIO DE LÓGICA DESTINADO À CRIANÇAS DO ENSINO FUNDAMENTAL DA REDE MUNICIPAL DE IBIRAMA
+# Brincando & Aprendendo - TCC
+## DESENVOLVIMENTO DE UM APLICATIVO EM ANDROID PARA AUXÍLIO DE LÓGICA DESTINADO À CRIANÇAS DO ENSINO FUNDAMENTAL DA REDE MUNICIPAL DE IBIRAMA
+### Trabalho de conclusão do curso de informática do Instituto Federal Catarinense campus Ibirama
 
-Trabalho de conclusão do curso de informática do Instituto Federal Catarinense campus Ibirama
+## Desenvolvimento por: 
+ - André Cristen Info 15                     
+ - Adrian Grosch Info 15
 
-Desenvolvimento por: André Cristen Info 15                     Adrian Grosch Info 15
+## Disciplina: 
+ - Análise de Sistemas II
 
-Disciplina: Análise de Sistemas II
-
-Professor orientador: Daniel dos Santos Júnior
+## Professor orientador: 
+ - Daniel dos Santos Júnior
